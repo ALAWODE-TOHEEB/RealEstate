@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url(first\ building.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+nav img{
+    width: 100px;
+    height: 40px;
+    box-shadow: 2px 3px 5px blue;
+}
+
+.nav-links{
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-align: right;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: pink;
+    display: block;
+    margin: auto;
+}
+
+.nav-links ul li a:hover::after{
+    width: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);  
+}
+
+.text-box h1{
+    font-size: 70px;
+}
+
+.text-box p{
+    margin: 10px 0 40px 0;
+    font-size: 40px;
+    color: white;
+}
+
+.adress{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.adress:hover{
+    border: 1px solid lightblue;
+    background: lightpink;
+    transition: 1s;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+
+}
+.nav-links{
+    position: absolute;
+    width: 200px;
+    top: 0;
+    right: 0;
+    background: green;
+    height: 300px;
+    width: 200px;
+    text-align: right;
+    z-index: 2;
+}
+
+}
+
+/* courses we offer */
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.course h1{
+    font-size: 40px;
+    font-weight: 600px;
+}
+
+.course p{
+    color: gray;
+    font-size: 15px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.course .coloumn{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-list{
+    background: lightpink;
+    border-radius: 12px;
+    margin-bottom: 5%;
+    padding: 20px 14px;
+    margin-right: 5%;
+    box-sizing: border-box;
+
+}
+
+.course-list h3{
+    text-align: center;
+    font-weight: 600px;
+    margin: 12px 0;
+}
+
+.course-list:hover{
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.9);
+}
+
+@media (max-width: 700px){
+    .course .coloumn{
+        flex-direction: column;
+    }
+}
+
+/* Our Services */
+
+.ourservices{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.service{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.image{
+    position: relative;
+    width: 400px;
+
+}
+
+.image-src{
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.overlay > *{
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+    background: rgba(150,0,0,0.4);
+    border-radius: 10px;
+}
+
+.overlay:hover > *{
+    transform: translateY(0)
+}
+.image-title{
+     font-weight: bold;
+}
+
+.image-desc{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+
+.image2{
+    position: relative;
+    width: 400px;
+
+}
+
+.image-src2{
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.overlay2 > *{
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.overlay2:hover{
+    opacity: 1;
+    background: rgba(150,0,0,0.4);
+    border-radius: 10px;
+}
+
+.overlay2:hover > *{
+    transform: translateY(0)
+}
+.image-title2{
+     font-weight: bold;
+}
+
+.image-desc2{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+.image3{
+    position: relative;
+    width: 400px;
+
+}
+
+.image-src3{
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.overlay3 > *{
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.overlay3:hover{
+    opacity: 1;
+    background: rgba(150,0,0,0.4);
+    border-radius: 10px;
+}
+
+.overlay3:hover > *{
+    transform: translateY(0)
+}
+.image-title3{
+     font-weight: bold;
+}
+
+.image-desc3{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+
+
+
+/* our facilities */
+
+.tool{
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.tool h1{
+    text-align: center;
+}
+
+.tool p{
+    text-align: center;
+}
+
+.paint{
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+
+.paint-coloumn{
+    flex: 33.33%;
+    padding: 50px;
+    position: relative;
+}
+
+.paint-coloumn img{
+    border-radius: 10px;
+    animation: myscalinganimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes myscalinganimation{
+    50%{transform: scale(0.5,0.5)}
+}
+
+
